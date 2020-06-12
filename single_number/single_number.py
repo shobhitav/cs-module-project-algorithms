@@ -3,9 +3,21 @@ Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
 def single_number(arr):
-    # Your code here
+    new_dict={}
+    
+    for item in arr:
+        if new_dict.get(item) is None:
+           new_dict[item]=1
+        else:
+            new_dict[item]+=1
+    # return new_dict
 
-    pass
+    for key in new_dict:
+        if new_dict[key]==1:
+            return key
+           
+
+    
 
 
 if __name__ == '__main__':
